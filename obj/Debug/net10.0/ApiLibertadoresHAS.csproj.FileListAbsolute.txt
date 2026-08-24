@@ -316,4 +316,3 @@ E:\Aurichio-Acioli - 3AI\PAM\ApiLibertadoresHAS\obj\Debug\net10.0\ApiLibertadore
 E:\Aurichio-Acioli - 3AI\PAM\ApiLibertadoresHAS\obj\Debug\net10.0\ApiLibertadoresHAS.genruntimeconfig.cache
 E:\Aurichio-Acioli - 3AI\PAM\ApiLibertadoresHAS\obj\Debug\net10.0\ref\ApiLibertadoresHAS.dll
 E:\Aurichio-Acioli - 3AI\PAM\ApiLibertadoresHAS\bin\Debug\net10.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
-E:\Aurichio-Acioli - 3AI\PAM\ApiLibertadoresHAS\obj\Debug\net10.0\staticwebassets.upToDateCheck.txt

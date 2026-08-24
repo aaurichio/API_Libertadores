@@ -3184,7 +3184,7 @@
     ]
   },
   "packageFolders": {
-    "D:\\NUGET_PACKAGES": {},
+    "D:\\NugetPackages": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
@@ -3193,7 +3193,7 @@
       "projectUniqueName": "E:\\Aurichio-Acioli - 3AI\\PAM\\ApiLibertadoresHAS\\ApiLibertadoresHAS.csproj",
       "projectName": "ApiLibertadoresHAS",
       "projectPath": "E:\\Aurichio-Acioli - 3AI\\PAM\\ApiLibertadoresHAS\\ApiLibertadoresHAS.csproj",
-      "packagesPath": "D:\\NUGET_PACKAGES",
+      "packagesPath": "D:\\NugetPackages",
       "outputPath": "E:\\Aurichio-Acioli - 3AI\\PAM\\ApiLibertadoresHAS\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
