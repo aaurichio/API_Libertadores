@@ -1,21 +1,30 @@
 ﻿using ApiLibertadoresHAS.Data;
 using ApiLibertadoresHAS.Models;
 using ApiLibertadoresHAS.Utils;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
+using System.IdentityModel.Tokens.Jwt;
+using System.Security.Claims;
+using System.Security.Cryptography.Xml;
+using System.Text;
 
 namespace ApiLibertadoresHAS.Controllers
 {
+    [Authorize]
     [ApiController]
     [Route("[controller]")]
     public class UsuariosController : ControllerBase
     {
         private readonly DataContext _context;
 
-        public UsuariosController(DataContext context)
+        private readonly IConfiguration _configuration;
+        public UsuariosController(DataContext context, IConfiguration configuration)
         {
             _context = context;
+            _configuration = configuration;
         }
 
         private async Task<bool> UsuarioExistente(string username)
@@ -32,7 +41,7 @@ namespace ApiLibertadoresHAS.Controllers
         {
             try
             {
-                if (await UsuarioExistente(user.Username))
+                if (await UsuarioExistente(user.Username)) 
                     throw new System.Exception("Nome de usuário já existe");
 
                 Criptografia.CriarPasswordHash(user.PasswordString, out byte[] hash, out byte[] salt);
@@ -50,6 +59,7 @@ namespace ApiLibertadoresHAS.Controllers
             }
         }
 
+        [AllowAnonymous]
         [HttpPost("Autenticar")]
         public async Task<IActionResult> AutenticarUsuario(Usuario credenciais)
         {
@@ -66,7 +76,7 @@ namespace ApiLibertadoresHAS.Controllers
                     usuario.PasswordString = string.Empty;
                     usuario.PasswordHash = null;
                     usuario.PasswordSalt = null;
-
+                    usuario.Token = CriarToken(usuario);
                     return Ok(usuario);
                 }
             }
@@ -88,6 +98,28 @@ namespace ApiLibertadoresHAS.Controllers
             {
                 return BadRequest(ex.Message + " - " + ex.InnerException);
             }
+        }
+
+        private string CriarToken(Usuario usuario)
+        {
+            List<Claim> claims = new List<Claim>
+            {
+            new Claim(ClaimTypes.NameIdentifier, usuario.Id.ToString()),
+            new Claim(ClaimTypes.Name, usuario.Username),
+            new Claim(ClaimTypes.Role, usuario.Perfil)
+            };
+                SymmetricSecurityKey key = new SymmetricSecurityKey(Encoding.UTF8
+                .GetBytes(_configuration.GetSection("ConfiguracaoToken:123456").Value));
+                SigningCredentials creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha512Signature);
+                SecurityTokenDescriptor tokenDescriptor = new SecurityTokenDescriptor
+                {
+                    Subject = new ClaimsIdentity(claims),
+                    Expires = DateTime.Now.AddDays(1),
+                    SigningCredentials = creds
+                };
+                JwtSecurityTokenHandler tokenHandler = new JwtSecurityTokenHandler();
+                SecurityToken token = tokenHandler.CreateToken(tokenDescriptor);
+                return tokenHandler.WriteToken(token);
         }
     }
 }

@@ -1,0 +1,315 @@
+[
+  {
+    "ContainingType": "ApiLibertadoresHAS.Controllers.EstadiosController",
+    "Method": "Add",
+    "RelativePath": "Estadios",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "estadio",
+        "Type": "ApiLibertadoresHAS.Models.Estadio",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ApiLibertadoresHAS.Controllers.EstadiosController",
+    "Method": "Update",
+    "RelativePath": "Estadios",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "estadio",
+        "Type": "ApiLibertadoresHAS.Models.Estadio",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ApiLibertadoresHAS.Controllers.EstadiosController",
+    "Method": "GetSingle",
+    "RelativePath": "Estadios/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ApiLibertadoresHAS.Controllers.EstadiosController",
+    "Method": "Delete",
+    "RelativePath": "Estadios/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ApiLibertadoresHAS.Controllers.EstadiosController",
+    "Method": "Get",
+    "RelativePath": "Estadios/GetAll",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ApiLibertadoresHAS.Controllers.JogadoresController",
+    "Method": "Add",
+    "RelativePath": "Jogadores",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "novoJogador",
+        "Type": "ApiLibertadoresHAS.Models.Jogador",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ApiLibertadoresHAS.Controllers.JogadoresController",
+    "Method": "Update",
+    "RelativePath": "Jogadores",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "jogador",
+        "Type": "ApiLibertadoresHAS.Models.Jogador",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ApiLibertadoresHAS.Controllers.JogadoresController",
+    "Method": "GetSingle",
+    "RelativePath": "Jogadores/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ApiLibertadoresHAS.Controllers.JogadoresController",
+    "Method": "Delete",
+    "RelativePath": "Jogadores/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ApiLibertadoresHAS.Controllers.JogadoresController",
+    "Method": "Get",
+    "RelativePath": "Jogadores/GetAll",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ApiLibertadoresHAS.Controllers.PartidasController",
+    "Method": "Add",
+    "RelativePath": "Partidas",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "partida",
+        "Type": "ApiLibertadoresHAS.Models.Partida",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ApiLibertadoresHAS.Controllers.PartidasController",
+    "Method": "Get",
+    "RelativePath": "Partidas/ObterTabela",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ApiLibertadoresHAS.Controllers.PosicoesController",
+    "Method": "GetSingle",
+    "RelativePath": "Posicoes/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ApiLibertadoresHAS.Controllers.PosicoesController",
+    "Method": "Get",
+    "RelativePath": "Posicoes/GetAll",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ApiLibertadoresHAS.Controllers.RodadasController",
+    "Method": "GetSingle",
+    "RelativePath": "Rodadas/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ApiLibertadoresHAS.Controllers.RodadasController",
+    "Method": "Get",
+    "RelativePath": "Rodadas/GetAll",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CopaHAS.Controllers.TimesController",
+    "Method": "GetSingle",
+    "RelativePath": "Times/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CopaHAS.Controllers.TimesController",
+    "Method": "Get",
+    "RelativePath": "Times/GetAll",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ApiLibertadoresHAS.Controllers.UsuariosController",
+    "Method": "AutenticarUsuario",
+    "RelativePath": "Usuarios/Autenticar",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "credenciais",
+        "Type": "ApiLibertadoresHAS.Models.Usuario",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ApiLibertadoresHAS.Controllers.UsuariosController",
+    "Method": "GetUsuarios",
+    "RelativePath": "Usuarios/GetAll",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ApiLibertadoresHAS.Controllers.UsuariosController",
+    "Method": "RegistrarUsuario",
+    "RelativePath": "Usuarios/Registrar",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "user",
+        "Type": "ApiLibertadoresHAS.Models.Usuario",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Program\u002B\u003C\u003Ec__DisplayClass0_0",
+    "Method": "\u003C\u003CMain\u003E$\u003Eb__2",
+    "RelativePath": "weatherforecast",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "WeatherForecast[]",
+        "MediaTypes": [
+          "application/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "EndpointName": "GetWeatherForecast"
+  }
+]
