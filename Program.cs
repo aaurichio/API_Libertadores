@@ -35,11 +35,13 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
         {
             ValidateIssuerSigningKey = true,
             IssuerSigningKey = new SymmetricSecurityKey(Encoding.ASCII
-                .GetBytes(builder.Configuration.GetSection("ConfiguracaoToken:123456").Value)),
+                .GetBytes(builder.Configuration.GetSection("ConfiguracaoToken:Chave").Value)),
             ValidateIssuer = false,
             ValidateAudience = false
         };
     });
+
+
 
 var app = builder.Build();
 

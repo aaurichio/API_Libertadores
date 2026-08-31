@@ -33,9 +33,10 @@ namespace ApiLibertadoresHAS.Controllers
             {
                 return true;
             }
-            return true;
+            return false;
         }
 
+        [AllowAnonymous]
         [HttpPost("Registrar")]
         public async Task<IActionResult> RegistrarUsuario(Usuario user)
         {
@@ -104,12 +105,12 @@ namespace ApiLibertadoresHAS.Controllers
         {
             List<Claim> claims = new List<Claim>
             {
-            new Claim(ClaimTypes.NameIdentifier, usuario.Id.ToString()),
-            new Claim(ClaimTypes.Name, usuario.Username),
-            new Claim(ClaimTypes.Role, usuario.Perfil)
+                new Claim(ClaimTypes.NameIdentifier, usuario.Id.ToString()),
+                new Claim(ClaimTypes.Name, usuario.Username),
+                new Claim(ClaimTypes.Role, usuario.Perfil)
             };
                 SymmetricSecurityKey key = new SymmetricSecurityKey(Encoding.UTF8
-                .GetBytes(_configuration.GetSection("ConfiguracaoToken:123456").Value));
+                .GetBytes(_configuration.GetSection("ConfiguracaoToken:Chave").Value));
                 SigningCredentials creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha512Signature);
                 SecurityTokenDescriptor tokenDescriptor = new SecurityTokenDescriptor
                 {

@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace ApiLibertadoresHAS.Controllers
 {
-    [Authorize]
+    [Authorize(Roles ="UsuarioComum,Admin")]
     [ApiController]
     [Route("[controller]")]
     public class JogadoresController : ControllerBase

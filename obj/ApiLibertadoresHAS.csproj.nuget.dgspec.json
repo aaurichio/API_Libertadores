@@ -10,14 +10,14 @@
         "projectUniqueName": "E:\\Aurichio-Acioli - 3AI\\PAM\\ApiLibertadoresHAS\\ApiLibertadoresHAS.csproj",
         "projectName": "ApiLibertadoresHAS",
         "projectPath": "E:\\Aurichio-Acioli - 3AI\\PAM\\ApiLibertadoresHAS\\ApiLibertadoresHAS.csproj",
-        "packagesPath": "D:\\NugetPackages",
+        "packagesPath": "C:\\Users\\Note\\.nuget\\packages\\",
         "outputPath": "E:\\Aurichio-Acioli - 3AI\\PAM\\ApiLibertadoresHAS\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\etechas\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Note\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,7 +26,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
